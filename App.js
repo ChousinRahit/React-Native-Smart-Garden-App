@@ -1,15 +1,16 @@
 import { NativeBaseProvider } from 'native-base';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { MainHeading } from 'components';
-import { TabNav } from 'navigation';
-import { NavigationContainer } from '@react-navigation/native';
 
+import { TabNav, AuthNavigator } from 'navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import theme from './src/theme';
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <TabNav />
+        {isLoggedIn ? <TabNav /> : <AuthNavigator />}
       </NavigationContainer>
     </NativeBaseProvider>
   );

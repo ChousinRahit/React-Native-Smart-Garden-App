@@ -3,7 +3,7 @@ import React from 'react';
 import { MainHeading, ImageCarousel } from 'components';
 import { ScrollView, StatusBar, View } from 'native-base';
 import { Colors, Images } from 'assets';
-import { InfoCards } from 'components';
+import { InfoCards, Button } from 'components';
 
 const HomeScreen = () => {
   return (
@@ -14,6 +14,8 @@ const HomeScreen = () => {
       />
       <MainHeading />
       <ImageCarousel data={[Images.garOne, Images.garTwo, Images.garThree]} />
+      <Button type="borderd" color={Colors.selection} title="Borderd" />
+
       <InfoCards />
     </ScrollView>
   );

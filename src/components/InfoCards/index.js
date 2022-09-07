@@ -9,7 +9,9 @@ const index = () => {
     <>
       <AtmCards />
       <View mb="2"></View>
-      <StatusCards />
+      <View pb="5">
+        <StatusCards />
+      </View>
     </>
   );
 };

@@ -1,3 +1,3 @@
 import TabNav from './MainNavigator';
-
-export { TabNav };
+import AuthNavigator from './AuthNavigator';
+export { TabNav, AuthNavigator };
